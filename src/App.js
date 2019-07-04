@@ -5,9 +5,9 @@ import './index.css';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Navbar/>
-      <Routes/>
+      <Routes className="body-router"/>
     </div>
   );
 };

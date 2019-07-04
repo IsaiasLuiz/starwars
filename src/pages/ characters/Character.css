@@ -1,0 +1,17 @@
+.character{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.physical-data{
+  margin-top: 30px;
+  font-size: 2em;
+  list-style: none;
+  color: #01DF3A;
+  font-weight: 900;
+}
+
+.physical-data  div{
+
+}

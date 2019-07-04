@@ -12,11 +12,9 @@ export default class Card extends Component{
         <div className="card-image">
           <img src={this.props.linkImg}/>
         </div>
-        <button className="card-btn">
-          <Link to={`character/${this.props.id}`}>
+          <Link to={`character/${this.props.id}`} className="card-btn">
           {this.props.textBtn}
           </Link>
-        </button>
       </section>
     )
   }
