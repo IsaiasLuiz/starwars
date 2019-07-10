@@ -5,9 +5,8 @@ export default class extends Component{
   render(){
     return(
       <div className="pagination">
-        <button>Previous</button>
-        
-        <button>Next</button>
+        <span className="previous"></span>
+        <span className="next"></span>
       </div>
     )
   }

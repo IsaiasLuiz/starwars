@@ -1,14 +1,49 @@
 .pagination{
-  border: 1px solid red;
   margin-bottom: 50px;
   margin-top: 50px;
   width: 100%;
   height: 80px;
   display: flex;
-  justify-content: center
+  justify-content: center;
+  align-items: center;
 }
 
-.pagination button{
-  width: 100px;
-  height: 100%;
+.pagination span{
+  display: block;
+}
+
+.pagination .previous{
+  margin-right: 250px;
+}
+
+.pagination span::after, .pagination span::before{
+  position: absolute;
+  content: '';
+  width: 30px;
+  height: 2px;
+}
+
+.pagination span::after{
+  border: 2px solid blue;
+  margin-top: -10px;
+}
+.pagination span::before{
+  border: 2px solid red;
+  margin-bottom: -20px;
+}
+
+.pagination .previous::after{
+  transform: rotate(320deg);
+}
+
+.pagination .previous::before{
+  transform: rotate(-320deg);
+}
+
+.pagination .next::after{
+  transform: rotate(40deg);
+}
+
+.pagination .next::before{
+  transform: rotate(-40deg);
 }
