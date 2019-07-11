@@ -1,5 +1,5 @@
-.main-body{
+.main-body {
   display: flex;
   flex-wrap: wrap;
-  background: url("https://cdn.pixabay.com/photo/2016/01/27/15/25/space-1164579_960_720.png")
+  background: url('https://cdn.pixabay.com/photo/2016/01/27/15/25/space-1164579_960_720.png');
 }

@@ -1,4 +1,4 @@
-.loading-active{
+.loading-active {
   position: fixed;
   display: flex;
   width: 100%;
@@ -6,16 +6,17 @@
   right: 0;
   top: 0;
   bottom: 0;
-  background: #2EFEF7;
+  background: #2efef7;
   justify-content: center;
   align-items: center;
+  z-index: 100;
 }
 
-.loading-disabled{
+.loading-disabled {
   display: none;
 }
 
-.loading-active:before{
+.loading-active:before {
   border-top: 1px solid blue;
   border-width: 4px;
   display: block;
@@ -23,7 +24,7 @@
   top: 50%;
   left: 50%;
   width: 120px;
-  height: 120px;  
+  height: 120px;
   margin-top: -60px;
   margin-left: -60px;
   border-radius: 50%;
@@ -32,10 +33,10 @@
 }
 
 @keyframes rotate {
-  from{
+  from {
     transform: rotate(0deg);
   }
-  to{
+  to {
     transform: rotate(360deg);
   }
 }

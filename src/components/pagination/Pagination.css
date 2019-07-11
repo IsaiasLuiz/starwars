@@ -1,4 +1,4 @@
-.pagination{
+.pagination {
   margin-bottom: 50px;
   margin-top: 50px;
   width: 100%;
@@ -8,42 +8,49 @@
   align-items: center;
 }
 
-.pagination span{
+.pagination button {
   display: block;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 10px;
+  height: 35px;
 }
 
-.pagination .previous{
+.pagination .previous {
   margin-right: 250px;
 }
 
-.pagination span::after, .pagination span::before{
+.pagination button::after,
+.pagination button::before {
   position: absolute;
   content: '';
   width: 30px;
   height: 2px;
+  visibility: visible;
 }
 
-.pagination span::after{
+.pagination button::after {
   border: 2px solid blue;
   margin-top: -10px;
 }
-.pagination span::before{
+.pagination button::before {
   border: 2px solid red;
   margin-bottom: -20px;
 }
 
-.pagination .previous::after{
+.pagination .previous::after {
   transform: rotate(320deg);
 }
 
-.pagination .previous::before{
+.pagination .previous::before {
   transform: rotate(-320deg);
 }
 
-.pagination .next::after{
+.pagination .next::after {
   transform: rotate(40deg);
 }
 
-.pagination .next::before{
+.pagination .next::before {
   transform: rotate(-40deg);
 }

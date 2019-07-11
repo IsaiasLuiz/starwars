@@ -6,10 +6,10 @@ import './index.css';
 function App() {
   return (
     <div>
-      <Navbar/>
-      <Routes className="body-router"/>
+      <Navbar />
+      <Routes className="body-router" />
     </div>
   );
-};
+}
 
 export default App;
