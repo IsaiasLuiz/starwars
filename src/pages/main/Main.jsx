@@ -39,19 +39,24 @@ export default class Main extends Component {
   };
 
   previousPage = () => {
-    const page = this.state.page - 1;
-    if (page >= 1) {
-      this.setState({ page: page });
-      this.loadPersons(page);
+    let page = this.state.page - 1;
+    if (page < 1) {
+      page = this.state.maxPage;
     }
+    this.refreshPage(page);
   };
 
   nextPage = () => {
-    const page = this.state.page + 1;
-    if (page <= this.state.maxPage) {
-      this.setState({ page: page });
-      this.loadPersons(page);
+    let page = this.state.page + 1;
+    if (page > this.state.maxPage) {
+      page = 1;
     }
+    this.refreshPage(page);
+  };
+
+  refreshPage = page => {
+    this.setState({ page: page });
+    this.loadPersons(page);
   };
 
   render() {
