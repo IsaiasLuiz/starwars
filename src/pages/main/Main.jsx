@@ -10,7 +10,7 @@ export default class Main extends Component {
     page: 1,
     characters: [],
     loading: false,
-    maxPage: 1,
+    maxPages: 1,
     firstResquest: true,
   };
   componentDidMount = () => {
@@ -24,14 +24,14 @@ export default class Main extends Component {
         const { results } = response.data;
         if (this.state.firstResquest) {
           const { count } = response.data;
-          const maxPage =
+          const maxPages =
             (count - (count % 10)) / 10 + (count % 10 > 0 ? 1 : 0);
-          this.setState({ maxPage: maxPage, firstResquest: false });
+          this.setState({ maxPages: maxPages, firstResquest: false });
         }
         this.setState({ characters: results });
       })
       .catch(() => {
-        console.log('error');
+        console.log('Error requesting characters');
       })
       .finally(() => {
         this.setState({ loading: false });
@@ -41,17 +41,21 @@ export default class Main extends Component {
   previousPage = () => {
     let page = this.state.page - 1;
     if (page < 1) {
-      page = this.state.maxPage;
+      page = this.state.maxPages;
     }
     this.refreshPage(page);
   };
 
   nextPage = () => {
     let page = this.state.page + 1;
-    if (page > this.state.maxPage) {
+    if (page > this.state.maxPages) {
       page = 1;
     }
     this.refreshPage(page);
+  };
+
+  specificPage = newPage => {
+    this.refreshPage(newPage);
   };
 
   refreshPage = page => {
@@ -72,7 +76,13 @@ export default class Main extends Component {
             id={character.url.replace(/[^\d]/g, '')}
           />
         ))}
-        <Pagination previous={this.previousPage} next={this.nextPage} />
+        <Pagination
+          previous={this.previousPage}
+          next={this.nextPage}
+          currentPage={this.state.page}
+          totalPages={this.state.maxPages}
+          specificPage={this.specificPage}
+        />
       </div>
     );
   }

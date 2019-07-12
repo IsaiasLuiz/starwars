@@ -8,17 +8,35 @@
   align-items: center;
 }
 
+.pagination label{
+  color: red;
+  margin:  0 20px 8px 0;
+  width: 20px;
+  height: 10px;
+  text-align: center;
+  padding-top: 3px;
+  border: 1px solid orange;
+}
+
+.pagination .current-page{
+  background: orange;
+}
+
+.pagination label:hover{
+  border: red;
+  background: red;
+}
+
 .pagination button {
   display: block;
   background: none;
   border: none;
   cursor: pointer;
-  width: 10px;
   height: 35px;
 }
 
 .pagination .previous {
-  margin-right: 250px;
+  margin-right: 55px;
 }
 
 .pagination button::after,
