@@ -1,0 +1,24 @@
+.star-ship {
+  border: 2px dotted blue;
+  text-align: center;
+  font-size: 1.5em;
+  margin: 10px;
+}
+
+.star-ship ul {
+  list-style: none;
+}
+
+.star-ship li {
+  color: yellow;
+}
+
+.star-ship h1 {
+  color: red;
+  padding: 10px;
+}
+
+.star-ship h2 {
+  color: #01df3a;
+  padding: 0 10px 10px 10px;
+}

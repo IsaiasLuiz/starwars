@@ -8,21 +8,21 @@
   align-items: center;
 }
 
-.pagination label{
+.pagination label {
   color: red;
-  margin:  0 20px 8px 0;
-  width: 20px;
+  margin: 0 20px 8px 0;
+  width: 10px;
   height: 10px;
   text-align: center;
   padding-top: 3px;
   border: 1px solid orange;
 }
 
-.pagination .current-page{
+.pagination .current-page {
   background: orange;
 }
 
-.pagination label:hover{
+.pagination label:hover {
   border: red;
   background: red;
 }
@@ -36,14 +36,15 @@
 }
 
 .pagination .previous {
-  margin-right: 55px;
+  margin-right: 35px;
+  margin-left: -10px;
 }
 
 .pagination button::after,
 .pagination button::before {
   position: absolute;
   content: '';
-  width: 30px;
+  width: 10px;
   height: 2px;
   visibility: visible;
 }
